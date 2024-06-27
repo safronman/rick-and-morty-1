@@ -1,0 +1,49 @@
+.pageContainer {
+    width: 1400px;
+    margin: 50px auto;
+}
+
+.pageTitle {
+    margin: 0;
+    color: rgb(32, 35, 41);
+    font-weight: 900;
+    font-size: 70px;
+    text-align: center;
+}
+
+
+.errorMessage {
+    color: red;
+    text-align: center;
+}
+
+
+button {
+    border: 2px solid rgb(32, 35, 41);
+    margin: 10px;
+    padding: 10px;
+    color: white;
+    background-color: rgb(32, 35, 41);
+    text-decoration: none;
+    font-size: 24px;
+    min-width: 200px;
+    text-align: center;
+
+    &:hover {
+        color: rgb(32, 35, 41);
+        background-color: white ;
+    }
+}
+
+.link {
+    color: white;
+    font-weight: bold;
+    font-size: 32px;
+    margin-bottom: 10px;
+    display: block;
+    text-align: center;
+
+    &:hover {
+        text-decoration: none;
+    }
+}

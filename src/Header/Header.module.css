@@ -1,0 +1,25 @@
+.box {
+    margin: 20px;
+    border-bottom: 2px solid rgb(60, 62, 68);
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    padding-bottom: 5px;
+}
+
+.logo {
+    width: 40px;
+    height: 40px;
+}
+
+.headerLink {
+    color: rgb(32, 35, 41);
+    font-size: 18px;
+    text-align: center;
+    margin-right: 20px;
+
+    &:hover {
+        color: rgb(32, 35, 41);
+        text-decoration: none;
+    }
+}
