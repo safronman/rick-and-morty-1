@@ -1,6 +1,5 @@
 .box {
-    margin: 20px;
-    border-bottom: 2px solid rgb(60, 62, 68);
+    margin: 20px 0 10px 50px;
     display: flex;
     align-items: center;
     gap: 10px;
@@ -13,13 +12,13 @@
 }
 
 .headerLink {
-    color: rgb(32, 35, 41);
+    color: var(--main-text-color);
     font-size: 18px;
     text-align: center;
     margin-right: 20px;
 
     &:hover {
-        color: rgb(32, 35, 41);
+        color: var(--main-text-color);
         text-decoration: none;
     }
 }

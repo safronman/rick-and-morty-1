@@ -1,6 +1,6 @@
 .box {
     display: flex;
-    background-color: rgb(60, 62, 68);
+    background-color: var(--gray-20);
     color: white;
     width: 700px;
     border-radius: 10px;
