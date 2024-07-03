@@ -1,4 +1,4 @@
-import {useEffect, useState} from "react";
+import {Fragment, useEffect, useState} from "react";
 import axios from "axios";
 import {Link} from "react-router-dom";
 
@@ -23,7 +23,7 @@ export const LocationPage = () => {
             {
                 locations.map((l) => {
                     return (
-                        <div>
+                        <Fragment key={l.id}>
                             <ul>
                                 <li>Название локации: <b>{l.name}</b></li>
                                 <li>Тип локации: <b>{l.type}</b></li>
@@ -41,7 +41,7 @@ export const LocationPage = () => {
                                 )
                             })}
                             <hr/>
-                        </div>
+                        </Fragment>
                     )
                 })
 
