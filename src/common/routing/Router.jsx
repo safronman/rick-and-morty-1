@@ -1,5 +1,5 @@
 import React from "react";
-import {createBrowserRouter, Outlet} from "react-router-dom";
+import {createHashRouter, Outlet} from "react-router-dom";
 import {CharacterPage} from "../../pages/CharacterPage/CharacterPage";
 import {Character} from "../../pages/CharacterPage/Character/Character";
 import {LocationPage} from "../../pages/LocationPage/LocationPage";
@@ -16,7 +16,7 @@ const Layout = () => {
     );
 };
 
-export const router = createBrowserRouter([
+export const router = createHashRouter([
     {
         path: "/",
         element: <Layout/>,

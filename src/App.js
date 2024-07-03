@@ -4,8 +4,7 @@ import React from "react";
 
 export const App = () => {
     return (
-        // <RouterProvider router={router}/>
-        <h1>fsdfsdf</h1>
+        <RouterProvider router={router}/>
     )
 }
 
