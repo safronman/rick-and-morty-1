@@ -4,7 +4,7 @@
     align-items: center;
 }
 
-.box {
+.content {
     display: flex;
     background-color: var(--gray-20);
     color: white;
@@ -19,19 +19,6 @@
 
 .description {
     margin: 20px;
-}
-
-.lastKnowLocationTitle {
-    font-size: 16px;
-    line-height: 18px;
-    color: rgb(158, 158, 158);
-    margin: 5px;
-}
-
-.lastKnowLocationResult {
-    font-size: 18px;
-    line-height: 24px;
-    margin: 5px;
 }
 
 .statusBox {
@@ -60,5 +47,20 @@
 .unknownStatus {
     background: rgb(194, 191, 191);
 }
+
+.lastKnowLocationTitle {
+    font-size: 16px;
+    line-height: 18px;
+    color: rgb(158, 158, 158);
+    margin: 5px;
+}
+
+.lastKnowLocationResult {
+    font-size: 18px;
+    line-height: 24px;
+    margin: 5px;
+}
+
+
 
 

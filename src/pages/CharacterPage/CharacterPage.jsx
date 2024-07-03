@@ -52,15 +52,15 @@ export const CharacterPage = () => {
 
             {!error &&
                 <div>
-                    <div className={s.list}>
-                        {characters.map((hero) => {
-                            return <div className={s.item}>
-                                <Link to={`/characters/${hero.id}`} className={s.link}>{hero.name}</Link>
-                                <img src={hero.image} alt=""/>
+                    <div className={s.characters}>
+                        {characters.map((ch) => {
+                            return <div className={s.character}>
+                                <Link to={`/characters/${ch.id}`} className={s.characterLink}>{ch.name}</Link>
+                                <img src={ch.image} alt=""/>
                             </div>
                         })}
                     </div>
-                    <div className={s.buttonBox}>
+                    <div className={s.buttonContainer}>
                         <button className='linkButton' onClick={previousPageHandler}
                                 disabled={info.prev === null}>Назад
                         </button>

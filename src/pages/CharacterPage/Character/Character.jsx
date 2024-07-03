@@ -49,7 +49,7 @@ export const Character = () => {
                     ? 'Loading...'
                     : <div className={s.container}>
                         <h1 className='pageTitle'>{character.name}</h1>
-                        <div className={s.box}>
+                        <div className={s.content}>
                             <img src={character.image} alt="" className={s.img}/>
                             <div className={s.description}>
                                 <div className={s.statusBox}>
@@ -67,7 +67,6 @@ export const Character = () => {
                         </button>
                     </div>
             }
-
         </div>
     )
 }
