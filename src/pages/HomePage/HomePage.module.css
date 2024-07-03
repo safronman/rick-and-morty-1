@@ -1,5 +1,5 @@
 .mainContainer {
-    background: linear-gradient(rgb(194, 191, 191), rgba(0, 0, 0, 0.2)), url("../assets/bg.jpg");
+    background: linear-gradient(rgb(194, 191, 191), rgba(0, 0, 0, 0.2)), url("../../assets/bg.jpg");
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;

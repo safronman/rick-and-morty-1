@@ -1,7 +1,6 @@
 import {useNavigate, useParams} from "react-router-dom";
 import axios from "axios";
 import {useEffect, useState} from "react";
-import arrowBack from '../../assets/arrowBack.svg'
 import s from './Character.module.css'
 
 
@@ -48,7 +47,7 @@ export const Character = () => {
             {
                 character === null
                     ? 'Loading...'
-                    : <div>
+                    : <div className={s.container}>
                         <h1 className='pageTitle'>{character.name}</h1>
                         <div className={s.box}>
                             <img src={character.image} alt="" className={s.img}/>
@@ -63,10 +62,9 @@ export const Character = () => {
                                 </div>
                             </div>
                         </div>
-                        <div className={s.arrowBack} onClick={toPreviousPageHandler}>
-                            <img src={arrowBack} alt=""/>
-                            Вернуться на предыдущую страницу
-                        </div>
+                        <button className={s.previousPage} onClick={toPreviousPageHandler}>
+                            Go back
+                        </button>
                     </div>
             }
 

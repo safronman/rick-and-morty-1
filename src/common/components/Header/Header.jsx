@@ -1,4 +1,4 @@
-import logo from '../assets/logo.webp'
+import logo from '../../../assets/logo.webp'
 import s from './Header.module.css'
 import {NavLink} from "react-router-dom";
 

@@ -1,11 +1,11 @@
 import React from "react";
 import {createBrowserRouter, Outlet} from "react-router-dom";
-import {CharacterPage} from "./CharacterPage/CharacterPage";
-import {Character} from "./CharacterPage/Character/Character";
-import {LocationPage} from "./LocationPage/LocationPage";
-import {EpisodePage} from "./EpisodePage/EpisodePage";
-import {Header} from "./Header/Header";
-import {HomePage} from "./HomePage/HomePage";
+import {CharacterPage} from "../../pages/CharacterPage/CharacterPage";
+import {Character} from "../../pages/CharacterPage/Character/Character";
+import {LocationPage} from "../../pages/LocationPage/LocationPage";
+import {EpisodePage} from "../../pages/EpisodePage/EpisodePage";
+import {Header} from "../components/Header/Header";
+import {HomePage} from "../../pages/HomePage/HomePage";
 
 const Layout = () => {
     return (
