@@ -62,7 +62,7 @@ export const Character = () => {
                                 </div>
                             </div>
                         </div>
-                        <button className={s.previousPage} onClick={toPreviousPageHandler}>
+                        <button className='linkButton' onClick={toPreviousPageHandler}>
                             Go back
                         </button>
                     </div>

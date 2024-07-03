@@ -28,3 +28,15 @@
     width: calc(100% - 20px);
 }
 
+.link {
+    color: white;
+    font-weight: bold;
+    font-size: 32px;
+    margin-bottom: 10px;
+    display: block;
+    text-align: center;
+
+    &:hover {
+        text-decoration: none;
+    }
+}

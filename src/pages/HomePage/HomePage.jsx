@@ -7,9 +7,9 @@ export const HomePage = ()=> {
         <div className={s.mainContainer}>
             <h1 className={s.title}>The Rick and Morty</h1>
             <div className={s.linkContainer}>
-                <NavLink to={'/characters'} className={s.link}>Characters</NavLink>
-                <NavLink to={'/locations'} className={s.link}>Locations</NavLink>
-                <NavLink to={'/episodes'} className={s.link}>Episodes</NavLink>
+                <NavLink to={'/characters'} className='linkButton'>Characters</NavLink>
+                <NavLink to={'/locations'} className='linkButton'>Locations</NavLink>
+                <NavLink to={'/episodes'} className='linkButton'>Episodes</NavLink>
             </div>
         </div>
     )

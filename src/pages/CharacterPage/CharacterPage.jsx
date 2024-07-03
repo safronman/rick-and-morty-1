@@ -46,7 +46,7 @@ export const CharacterPage = () => {
     return (
         <div className={'pageContainer'}>
             <h1 className='pageTitle'>Characters</h1>
-            <input type="search" className={s.search} onChange={searchHandler} placeholder="Search..." />
+            <input type="search" className={s.search} onChange={searchHandler} placeholder="Search..."/>
 
             {!!error && <h1 className='errorMessage'>❌❌❌ {error} ❌❌❌</h1>}
 
@@ -55,14 +55,17 @@ export const CharacterPage = () => {
                     <div className={s.list}>
                         {characters.map((hero) => {
                             return <div className={s.item}>
-                                <Link to={`/characters/${hero.id}`} className="link">{hero.name}</Link>
+                                <Link to={`/characters/${hero.id}`} className={s.link}>{hero.name}</Link>
                                 <img src={hero.image} alt=""/>
                             </div>
                         })}
                     </div>
                     <div className={s.buttonBox}>
-                        <button onClick={previousPageHandler} disabled={info.prev === null}>Назад</button>
-                        <button onClick={nextPageHandler} disabled={info.next === null}>Вперед</button>
+                        <button className='linkButton' onClick={previousPageHandler}
+                                disabled={info.prev === null}>Назад
+                        </button>
+                        <button className='linkButton' onClick={nextPageHandler} disabled={info.next === null}>Вперед
+                        </button>
                     </div>
                 </div>
             }
