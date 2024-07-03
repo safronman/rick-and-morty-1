@@ -1,3 +1,9 @@
+:root {
+    --main-text-color: rgb(32, 35, 41);
+    --main-bg-color: rgba(128, 128, 128, 0.25);
+    --gray-20: rgb(60, 62, 68);
+}
+
 .pageContainer {
     width: 1400px;
     margin: 50px auto;
