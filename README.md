@@ -2,9 +2,8 @@
 # Rick and Morty мастер класс
 
 ## Материалы
-- [Методичка](https://safronman.gitbook.io/rick-and-morty)
+- [Методичка](https://safronman.gitbook.io/rick-and-morty-cra)
 - [Итоговый результат](https://safronman.github.io/rick-and-morty-CRA/)
-
 
 
 ## Примеры из интернета
