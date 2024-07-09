@@ -1,72 +1,74 @@
-import {useNavigate, useParams} from "react-router-dom";
-import axios from "axios";
 import {useEffect, useState} from "react";
+import axios from "axios";
 import s from './Character.module.css'
-
+import {useNavigate, useParams} from "react-router-dom";
 
 export const Character = () => {
 
-    const {characterId} = useParams()
+    const {id} = useParams()
 
     const navigate = useNavigate();
 
     const [character, setCharacter] = useState(null)
 
     useEffect(() => {
-        axios.get(`https://rickandmortyapi.com/api/character/${characterId}`).then((res) => {
+        axios.get(`https://rickandmortyapi.com/api/character/${id}`).then((res) => {
             setCharacter(res.data)
         })
     }, [])
-
-
-    const getClassName = (status) => {
-        let status2
-        switch (status) {
-            case 'Alive':
-                status2 = s.aliveStatus
-                break
-
-            case 'Dead':
-                status2 = s.deadStatus
-                break
-
-            case 'unknown':
-                status2 = s.unknownStatus
-                break
-        }
-
-        return `${s.status} ${status2}`
-    }
 
     const toPreviousPageHandler = () => {
         navigate(-1)
     }
 
+    const getStatusClassName = (status) => {
+        let characterStatus
+        switch (status) {
+            case 'Alive':
+                characterStatus = s.aliveStatus
+                break
+
+            case 'Dead':
+                characterStatus = s.deadStatus
+                break
+
+            case 'unknown':
+                characterStatus = s.unknownStatus
+                break
+
+            default:
+                characterStatus = ''
+        }
+
+        return `${s.status} ${characterStatus}`
+    }
+
     return (
-        <div className='pageContainer'>
-            {
-                character === null
-                    ? 'Loading...'
-                    : <div className={s.container}>
-                        <h1 className='pageTitle'>{character.name}</h1>
-                        <div className={s.content}>
-                            <img src={character.image} alt="" className={s.img}/>
-                            <div className={s.description}>
-                                <div className={s.statusBox}>
-                                    <div className={getClassName(character.status)}></div>
-                                    <div>{character.status} - {character.species}</div>
-                                </div>
-                                <div>
-                                    <p className={s.lastKnowLocationTitle}>Last known location</p>
-                                    <p className={s.lastKnowLocationResult}>{character.location.name}</p>
-                                </div>
-                            </div>
+        <div className="pageContainer">
+
+            {character !== null && <div className={s.container}>
+                <h1 className='pageTitle'>{character.name}</h1>
+                <div className={s.content}>
+                    <img className={s.img} src={character.image} alt="character"/>
+                    <div className={s.description}>
+                        <div className={s.statusContainer}>
+                            <div className={getStatusClassName(character.status)}></div>
+                            <div>{character.status} - {character.species}</div>
                         </div>
-                        <button className='linkButton' onClick={toPreviousPageHandler}>
-                            Go back
-                        </button>
+                        <div className={s.info}>
+                            <p className={s.subTitle}>Last known location:</p>
+                            <p className={s.subTitleResult}>{character.location.name}</p>
+                        </div>
+                        <div className={s.info}>
+                            <p className={s.subTitle}>Episode count:</p>
+                            <p className={s.subTitleResult}>{character.episode.length}</p>
+                        </div>
                     </div>
-            }
+                </div>
+                <button className='linkButton' onClick={toPreviousPageHandler}>
+                    Go back
+                </button>
+            </div>}
         </div>
     )
 }

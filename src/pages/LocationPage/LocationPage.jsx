@@ -28,7 +28,8 @@ export const LocationPage = () => {
                                 <li>Название локации: <b>{l.name}</b></li>
                                 <li>Тип локации: <b>{l.type}</b></li>
                                 <li>Измерение, в котором находится местоположение: <b>{l.dimension}</b></li>
-                                <li>Количество персонажей, которых видели а данной локации: <b>{l.residents.length}</b></li>
+                                <li>Количество персонажей, которых видели а данной локации: <b>{l.residents.length}</b>
+                                </li>
                             </ul>
 
                             {isShowCharacters && l.residents.map((url, index) => {
@@ -50,5 +51,4 @@ export const LocationPage = () => {
 
     );
 }
-
 

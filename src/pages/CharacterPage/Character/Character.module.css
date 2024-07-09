@@ -6,8 +6,8 @@
 
 .content {
     display: flex;
-    background-color: var(--gray-20);
-    color: white;
+    background-color: var(--slate-700);
+    color: var(--slate-50);
     width: 700px;
     border-radius: 10px;
     margin: 25px auto;
@@ -21,13 +21,32 @@
     margin: 20px;
 }
 
-.statusBox {
+.statusContainer {
     display: flex;
     align-items: center;
     margin-bottom: 20px;
     font-weight: bold;
     font-size: 18px;
 }
+
+.info {
+    margin-bottom: 20px;
+}
+
+.subTitle {
+    font-size: 16px;
+    font-weight: bold;
+    line-height: 18px;
+    color: var(--slate-400);
+    margin: 5px;
+}
+
+.subTitleResult {
+    font-size: 18px;
+    line-height: 24px;
+    margin: 5px;
+}
+
 
 .status {
     height: 10px;
@@ -37,30 +56,13 @@
 }
 
 .aliveStatus {
-    background: rgb(85, 204, 68);
+    background: var(--green-500);
 }
 
 .deadStatus {
-    background: rgb(214, 61, 46);
+    background: var(--red-600);
 }
 
 .unknownStatus {
-    background: rgb(194, 191, 191);
+    background: var(--slate-200);
 }
-
-.lastKnowLocationTitle {
-    font-size: 16px;
-    line-height: 18px;
-    color: rgb(158, 158, 158);
-    margin: 5px;
-}
-
-.lastKnowLocationResult {
-    font-size: 18px;
-    line-height: 24px;
-    margin: 5px;
-}
-
-
-
-

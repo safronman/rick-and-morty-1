@@ -1,11 +1,12 @@
 import {useEffect, useState} from "react";
 import axios from "axios";
-import {Link} from "react-router-dom";
 import s from './CharacterPage.module.css'
+import {Link} from "react-router-dom";
 
 export const CharacterPage = () => {
 
-    let [characters, setCharacters] = useState([])
+    const [characters, setCharacters] = useState([])
+
     let [info, setInfo] = useState({
         count: 0,
         pages: 0,
@@ -20,10 +21,9 @@ export const CharacterPage = () => {
             setCharacters(res.data.results);
             setInfo(res.data.info);
             setError(null)
+        }).catch((err) => {
+            setError(err.message)
         })
-            .catch((err) => {
-                setError(err.message)
-            })
     };
 
     useEffect(() => {
@@ -44,34 +44,33 @@ export const CharacterPage = () => {
     }
 
     return (
-        <div className={'pageContainer'}>
+        <div className='pageContainer'>
             <h1 className='pageTitle'>Characters</h1>
             <input type="search" className={s.search} onChange={searchHandler} placeholder="Search..."/>
 
-            {!!error && <h1 className='errorMessage'>❌❌❌ {error} ❌❌❌</h1>}
+            {!!error && <div className='errorMessage'>{error}</div>}
 
-            {!error &&
-                <div>
-                    <div className={s.characters}>
-                        {characters.map((ch) => {
-                            return <div className={s.character}>
-                                <Link to={`/characters/${ch.id}`} className={s.characterLink}>{ch.name}</Link>
-                                <img src={ch.image} alt=""/>
+            {!error && <>
+                <div className={s.characters}>
+                    {
+                        characters.map((character) => {
+                            return <div className={s.character} key={character.id}>
+                                <Link to={`/characters/${character.id}`} className={s.characterLink}>{character.name}</Link>
+                                <img src={character.image} alt="character"/>
                             </div>
-                        })}
-                    </div>
-                    <div className={s.buttonContainer}>
-                        <button className='linkButton' onClick={previousPageHandler}
-                                disabled={info.prev === null}>Назад
-                        </button>
-                        <button className='linkButton' onClick={nextPageHandler} disabled={info.next === null}>Вперед
-                        </button>
-                    </div>
+                        })
+                    }
                 </div>
-            }
+                <div className={s.buttonContainer}>
+                    <button className='linkButton' disabled={info.prev === null} onClick={previousPageHandler}>Назад
+                    </button>
+                    <button className='linkButton' disabled={info.next === null} onClick={nextPageHandler}>Вперед
+                    </button>
+                </div>
+            </>}
+
+
         </div>
-
-    );
+    )
 }
-
 

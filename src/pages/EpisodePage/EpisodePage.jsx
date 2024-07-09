@@ -26,7 +26,8 @@ export const EpisodePage = () => {
                                 <li>Эпизод: <b>{ep.episode}</b></li>
                                 <li>Название эпизода: <b>{ep.name}</b></li>
                                 <li>Дата выхода эпизода в эфир: <b>{ep.air_date}</b></li>
-                                <li>Список персонажей, которые были замечены в эпизоде: <b>{ep.characters.length}</b></li>
+                                <li>Список персонажей, которые были замечены в эпизоде: <b>{ep.characters.length}</b>
+                                </li>
                             </ul>
                             <hr/>
                         </div>
