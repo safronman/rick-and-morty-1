@@ -4,11 +4,11 @@ import {LocationPage} from "./pages/LocationPage/LocationPage";
 import {EpisodePage} from "./pages/EpisodePage/EpisodePage";
 import {HomePage} from "./pages/HomePage/HomePage";
 import React from "react";
-import {createBrowserRouter, Outlet, RouterProvider} from "react-router-dom";
+import {createHashRouter, Outlet, RouterProvider} from "react-router-dom";
 import {Header} from "./common/Header/Header";
 import {Character} from "./pages/CharacterPage/Character/Character";
 
-const router = createBrowserRouter([
+const router = createHashRouter([
     {
         path: "/",
         element: <div>

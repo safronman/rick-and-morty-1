@@ -3,7 +3,7 @@
 
 ## Материалы
 - [Методичка](https://safronman.gitbook.io/rick-and-morty)
-- [Итоговый результат](https://safronman.github.io/rick-and-morty-1/)
+- [Итоговый результат](https://safronman.github.io/rick-and-morty-CRA/)
 
 
 
